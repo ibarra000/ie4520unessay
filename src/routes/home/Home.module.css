@@ -1,0 +1,36 @@
+.home {
+  padding: 20rem 3rem 0 3rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-50px); /* Start slightly off the screen */
+  animation: fadeInSlide 1s forwards;
+}
+
+.home p {
+  text-align: center;
+  color: #333;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.home p b {
+  font-weight: bold;
+}
+
+.home p:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  color: darkred; /* Change text color on hover */
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
